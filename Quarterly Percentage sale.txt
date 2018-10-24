@@ -1,3 +1,6 @@
+
+To find percentage of sale for each month per quarter
+
 create table emp_profes(
 id varchar(4),
 qtr varchar(2),
