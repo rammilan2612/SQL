@@ -1,0 +1,36 @@
+
+To find 3rd highest student from different division
+
+create table tbl_class
+(
+     clm_div char(1),
+     clm_name varchar(10),
+     clm_marks integer
+)
+
+insert into tbl_class values('A','mukesh',25)
+insert into tbl_class values('A','sonu',35)
+insert into tbl_class values('A','shekhar',45)
+insert into tbl_class values('A','devesh',23)
+insert into tbl_class values('A','vinod',45)
+insert into tbl_class values('A','ritesh',45)
+insert into tbl_class values('A','manish',25)
+
+insert into tbl_class values('B','sarvesh',75)
+insert into tbl_class values('B','Alex',15)
+insert into tbl_class values('B','Alloy',70)
+insert into tbl_class values('B','Nikhil',15)
+
+insert into tbl_class values('C','Sonu',15)
+insert into tbl_class values('C','Ram',100)
+insert into tbl_class values('C','Pravin',85)
+
+insert into tbl_class values('B','Swap',20)
+insert into tbl_class values('B','Abhi',20)
+
+
+
+select clm_name, clm_div, clm_marks from tbl_class tb1
+where clm_marks =(select min(clm_marks) from (
+							select distinct top 3 clm_marks from tbl_class tb2 where tb2.clm_div=tb1.clm_div order by clm_marks desc)as a 
+							)
