@@ -1,0 +1,68 @@
+
+Find sum of sale for employee in each quarter
+
+
+create table emp_profes(
+id varchar(4),
+qtr varchar(2),
+mnth varchar(10),
+sale int)
+
+
+
+insert into emp_profes values('101','Q1','Jan',1000000)
+insert into emp_profes values('102','Q1','Jan',3000000)
+insert into emp_profes values('103','Q1','Jan',5000000)
+
+insert into emp_profes values('101','Q1','Feb',1000000)
+insert into emp_profes values('102','Q1','Feb',3000000)
+insert into emp_profes values('103','Q1','Feb',5000000)
+
+insert into emp_profes values('101','Q1','Mar',1000000)
+insert into emp_profes values('102','Q1','Mar',3000000)
+insert into emp_profes values('103','Q1','Mar',5000000)
+
+
+insert into emp_profes values('101','Q2','Apr',2000000)
+insert into emp_profes values('102','Q2','Apr',4000000)
+insert into emp_profes values('103','Q2','Apr',6000000)
+
+insert into emp_profes values('101','Q2','May',2000000)
+insert into emp_profes values('102','Q2','May',4000000)
+insert into emp_profes values('103','Q2','May',6000000)
+
+
+insert into emp_profes values('101','Q2','Jun',2000000)
+insert into emp_profes values('102','Q2','Jun',4000000)
+insert into emp_profes values('103','Q2','Jun',6000000)
+
+insert into emp_profes values('101','Q3','Jul',7000000)
+insert into emp_profes values('102','Q3','Jul',9000000)
+insert into emp_profes values('103','Q3','Jul',1100000)
+
+insert into emp_profes values('101','Q3','Aug',7000000)
+insert into emp_profes values('102','Q3','Aug',9000000)
+insert into emp_profes values('103','Q3','Aug',1100000)
+
+insert into emp_profes values('101','Q3','Sep',7000000)
+insert into emp_profes values('102','Q3','Sep',9000000)
+insert into emp_profes values('103','Q3','Sep',1100000)
+
+insert into emp_profes values('101','Q4','Oct',8000000)
+insert into emp_profes values('102','Q4','Oct',1200000)
+insert into emp_profes values('103','Q4','Oct',1400000)
+
+insert into emp_profes values('101','Q4','Nov',8000000)
+insert into emp_profes values('102','Q4','Nov',1200000)
+insert into emp_profes values('103','Q4','Nov',1400000)
+
+insert into emp_profes values('101','Q4','Dec',8000000)
+insert into emp_profes values('102','Q4','Dec',1200000)
+insert into emp_profes values('103','Q4','Dec',1400000)
+
+
+select * from
+     (select id,qtr, sale from emp_profes) as s
+pivot
+(sum(sale) for qtr in (Q1,Q2,Q3,Q4)) as pv
+
