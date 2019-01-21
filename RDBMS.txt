@@ -1,0 +1,14 @@
+
+RDBMS is a product that showcases data arranged as a collection of rows and columns. And these RDBMS products follow some of the Codd’s 12 rules.
+
+With an RDBMS, it is possible to embed a collection of programs or capabilities, enabling IT and other related teams to create, edit, update, manage and interrelate with a relational database.
+
+Features of RDBMS Systems:
+All data stored in the tables are provided by an RDBMS
+Ensures that all data stored are in the form of rows and columns
+Facilitates primary key, which helps in unique identification of the rows
+Index creation for retrieving data at a higher speed
+Facilitates a common column to be shared amid two or more tables
+Multi-user accessibility is facilitated to be controlled by individual users
+A virtual table creation is enabled to store sensitive data and simplify queries
+These features are the reasons why RDBMS is widely used across the world. In simple words, RDBMS is the software system that allows storing data in the form of tables.
